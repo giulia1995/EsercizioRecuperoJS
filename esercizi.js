@@ -165,10 +165,10 @@ function searchTasks(event){
     return task.todo.toLowerCase().includes(searchText);
    })
 
-   //Richiamo funzione per mostrare i task filtrati
+   //Richiamo funzione per mostrare le task filtrate
    displayFilteredTasks(filteredTasks);
 }
-//Funzione per visualizzare i task filtrati tramite input
+//Funzione per visualizzare le task filtrate tramite input
 function displayFilteredTasks(filteredTasks){
     const mainElement=document.querySelector("main");
     mainElement.innerHTML="";
@@ -191,7 +191,7 @@ function filterTasks(completed){
         const task=tasks[i]; 
         if (completed ===null || task.completed ===completed){
             const taskElement=document.createElement("div"); //creaiamo l'elemento HTML "div"
-            taskElement.innerText= task.todo; // assegno valore todo al div creato prima
+            taskElement.innerText= task.todo; // assegno valore "todo" al div creato prima
             if(task.completed){
                 taskElement.style.backgroundColor="green";
             } else 
